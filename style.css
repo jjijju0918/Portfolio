@@ -2,6 +2,7 @@
 :root {
     /* 폰트관련 변수로지정 */
     /* Color */
+    --color-PDark:#38006b;
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
@@ -116,4 +117,23 @@
 
 .navbar__menu__item:hover {
     background-color: var(--color-dark-purple);
+}
+
+/* Home */
+
+#home {
+    background: url('imgs/home-background.png') center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+    color: var(--color-PDark);
 }
