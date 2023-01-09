@@ -151,5 +151,11 @@
   margin: 24px;
   padding: 8px 12px;
   border: 2px solid var(--color-PDark);
+  color: var(--color-purple);
   border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover{
+  background-color: var(--color-PDark);
+  color: var(--color-white);
 }
