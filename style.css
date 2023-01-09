@@ -13,7 +13,6 @@
     --color-grey: #616161;
     --color-light-grey: #7c7979;
     --color-PLight: #fff1ff;
-    --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
   
@@ -107,11 +106,16 @@
     color: var(--color-white);
     padding: 16px;
     transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
 }
 
 #navbar.narbar__dark {
   background-color: var(--color-purple);
   padding: 8px;
+}
+
+.navbar__logo {
+  width: 50px;
 }
 
 .navbar__menu {
@@ -408,6 +412,7 @@
 
 #testimonals {
   background-color: var(--color-light-white);
+  margin-top: 200px;
 }
 
 .testimonials{
@@ -451,6 +456,7 @@
 
 #contact {
   background-color: var(--color-purple);
+  margin-top: 200px;
 }
 
 .contact__title, .contact__email, .contact__rights {
