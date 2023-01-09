@@ -60,16 +60,23 @@ workBtnContainer.addEventListener('click', (e) => {
         return;
     }
 
-    projectContainer.classList.add('anim-out');
-    projects.forEach((project) => {
-        if(filter === '*' || filter === project.dataset.type){
-            project.classList.remove('invisible');
-        } else {
-            project.classList.add('invisible');
-        }
-    });
+    // Remove selection form the previous item and select the new one
+    const acrive = document.querySelector('.category__btn.selected');
+    acrive.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target :
+                    e.target.parentNode; 
+    target.classList.add('selected');
 
+
+    projectContainer.classList.add('anim-out');
     setTimeout (() => {
+        projects.forEach((project) => {
+            if(filter === '*' || filter === project.dataset.type){
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
         projectContainer.classList.remove('anim-out');
     }, 300);
 });
