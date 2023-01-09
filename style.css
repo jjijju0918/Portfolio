@@ -98,12 +98,20 @@
 /* Navbar */
 
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-purple);
+    background-color: transparent;
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.narbar__dark {
+  background-color: var(--color-purple);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -118,13 +126,14 @@
     border-radius: var(--size-border-radius);
 }
 
-/* .navbar__menu__item.active {
+.navbar__menu__item.active {
     border: 1px solid var(--color-white);
-} */
+}
 
 .navbar__menu__item:hover {
     background-color: var(--color-dark-purple);
-    border: 1px solid var(--color-white);
+    /* border: 1px solid var(--color-white);
+*/
 }
 
 .navbar__toggle-btn {
@@ -141,6 +150,7 @@
 #home {
     background: url('imgs/home-background.png') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 .home__avatar {
