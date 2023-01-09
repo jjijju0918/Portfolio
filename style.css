@@ -59,7 +59,14 @@
     padding-left: 0;
   }
 
+  button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
 
+/* Typography */
   h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
@@ -136,4 +143,13 @@
 .home__title,
 .home__description {
     color: var(--color-PDark);
+}
+
+.home__contact {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-PDark);
+  border-radius: var(--size-border-radius);
 }
