@@ -103,7 +103,7 @@
     justify-content: space-between;
     background-color: transparent;
     align-items: center;
-    color: var(--color-white);
+    color: var(--color-dark-purple);
     padding: 16px;
     transition: all var(--animation-duration) ease-in-out;
     z-index: 1;
@@ -111,6 +111,7 @@
 
 #navbar.narbar__dark {
   background-color: var(--color-purple);
+  color: var(--color-white);
   padding: 8px;
 }
 
@@ -131,11 +132,13 @@
 }
 
 .navbar__menu__item.active {
-    border: 1px solid var(--color-white);
+    /* border: 1px solid var(--color-white); */
+    border: 2px solid var(--color-PLight);
 }
 
 .navbar__menu__item:hover {
     background-color: var(--color-dark-purple);
+    color: var(--color-white);
     /* border: 1px solid var(--color-white);
 */
 }
@@ -479,6 +482,29 @@
   transition: all var(--animation-duration) ease-in;
 }
 
+/* Scroll */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-PDark);
+  color: var(--color-white);
+  border-radius: 50%;
+  /* display: none; */
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+.arrow-up.visible {
+  /* display: block; */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* For below 768px screen wifth */
 @media screen and (max-width: 768px){
   .navbar__toggle-btn {
     display: block;
