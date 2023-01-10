@@ -7,6 +7,7 @@
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
     --color-purple: #cb95d3;
+    --color-purple-active :#8b428b;
     --color-dark-purple: #6a0080;
     --color-black: #4d4d4d;
     --color-dark-grey: #4d4d4d;
@@ -101,9 +102,10 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    /* background-color: transparent; */
     align-items: center;
     color: var(--color-dark-purple);
+    /* background-color: var(--color-purple-bark); */
     padding: 16px;
     transition: all var(--animation-duration) ease-in-out;
     z-index: 1;
@@ -128,21 +130,17 @@
     padding: 8px 12px;
     margin: 0 4px;
     cursor: pointer;
-    border: 2px solid transparent;
     border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
-  border-color: var(--color-white);
+    border-color: var(--color-white);
     background-color: var(--color-dark-purple);
-    color: var(--color-white);
-    /* border: 2px solid var(--color-PLight) */
-    /* border: 1px solid var(--color-white);
-*/
+    color: var(--color-white); 
 }
 
 .navbar__menu__item.active {
-  border: 2px solid var(--color-PLight);
+  border: 2px solid var(--color-purple-active);
 }
 
 
@@ -536,6 +534,10 @@
 
   #navbar.navbar__dark {
     padding: 16px ;
+  }
+
+  .navbar__menu__item.active {
+    border: 2px solid var(--color-PLight);
   }
 
   .section {
